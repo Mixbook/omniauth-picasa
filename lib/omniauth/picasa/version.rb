@@ -1,5 +1,5 @@
 module OmniAuth
-  module Google
+  module Picasa
     VERSION = "1.0"
   end
 end
