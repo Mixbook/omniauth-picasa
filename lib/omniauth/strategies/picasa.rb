@@ -16,6 +16,10 @@ module OmniAuth
         :token_url     => '/o/oauth2/token'
       }
 
+      def callback_url
+        options[:redirect_uri] || (full_host + script_name + callback_path)
+      end
+
       def authorize_params
         base_scope_url = "https://www.googleapis.com/auth/"
         super.tap do |params|
